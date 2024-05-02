@@ -6,6 +6,7 @@
 </head>
 <body>
 <script>
+    //=========================ПОВТОРКА=====================
 // Масиви та об'єкти:
 // - Створити масив, наповнити його 10 елементами будь-якого типу,
 let mas1 = [1,2,3,4,5,6,7,8,9,0,]
@@ -19,36 +20,117 @@ let obj3 = {title:'blin',pageCount:333,genre:'ka'}
 // - Створити 3 об'єкти які описують книги. Поля об'єкту :
 // title ,pageCount, genre, authors. Поле "автори" - являється
 // масивом. Кожен автор має поля name та age.
-let obj1a = {title:'kolobok',pageCount:111,genre:'re',authors[
-
-    ]}
-let obj2a = {title:'bulka',pageCount:222,genre:'mu',authors[]}
-let obj3a = {title:'blin',pageCount:333,genre:'ka',authors[]}
+let obj1a = {title:'kolobok',pageCount:111,genre:'reno',
+    authors:{name:'mujik',age:13}}
+let obj2a = {title:'bulka',pageCount:222,genre:'mumu',
+    authors:{name:'ha_woman_hahahaha',age:43}}
+let obj3a = {title:'blin',pageCount:333,genre:'kaka',
+    authors:{name:'sara',age:1002983}}
 // - Створити масив з 10 об'єктами які описують сутніть
 // "користувач". Поля: name, username,password. Вивести в
 // консоль пароль кожного користувача
+let lox1 = {name:'lox1',username:'jaba',password:'jabapas'}
+let lox2 = {name:'lox2',username:'gus',password:'guspas'}
+let lox3 = {name:'lox3',username:'cat',password:'catpas'}
+let lox4 = {name:'lox4',username:'frog',password:'frogpas'}
+let lox5 = {name:'lox5',username:'fox',password:'foxpas'}
+let lox6 = {name:'lox6',username:'zayac',password:'zayacpas'}
+let lox7 = {name:'lox7',username:'wolf',password:'wolfpas'}
+let lox8 = {name:'lox8',username:'rabbit',password:'rabbitpas'}
+let lox9 = {name:'lox9',username:'potato',password:'potatopas'}
+let lox10 = {name:'lox10',username:'juk',password:'jukpas'}
+let loxi =
+    [lox1.password,lox2.password,lox3.password,lox4.password,
+    lox5.password, lox6.password, lox7.password,
+    lox8.password, lox9.password, lox10.password,]
+console.log(loxi)
 // - описати масив, в якому буде зберігатись інформація про
 // температуру вранці, вдень і ввечері за термін в 7 днів.
 // Як зробити цей масив - вам потрібно подумати. Нормальних
 // варіантів опису - 2. Варіант, коли в вас буде одновимірний
 // масив з 21 значенням вичключаємо одразу
-//
+//==========================================
 // Логічні розгалуження:
 //     - Є змінна х, якій ви надаєте довільне числове значення.
 //     Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше
 //     виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює
 //     1, 0, -3
+let x = 0
+if (x == 0){
+    console.log('Вірно')
+}
+else {
+    console.log('Невірно')
+}
+let a = [1,0,-3]
+// let i = 0
+for (i=0; i<a.length; i++){
+    let n = a[i]
+    if (a[i]==0){
+        console.log('Вірно')
+    }
+    else {
+        console.log('Невірно')
+    }
+}
 // - Дано змінну time яка рівна числу від 0 до 59. Потрібно
 // написати код, який перевірить, до якої четверті години попадає
 // число
 // (в першу, другу, третю или четверту частину години).
+let time = 55
+if (time >= 0 && time <15){
+    console.log('в першу')
+}
+if (time >= 15 && time <30){
+        console.log('в другу')
+}
+if (time >= 30 && time <45){
+        console.log('в третю')
+}
+if (time >= 45 && time <60){
+        console.log('в четверту')
+}
 // - У змінній day дано якесь число від 1 до 31. Потрібно
 // визначити, у яку половину(декаду) місяця потрапляє це число
 // (у першу, другу чи третю).
+let day = 1
+if (day >= 0 && day <10){
+    console.log('в першу')
+}
+if (day >= 10 && day <20){
+    console.log('в другу')
+}
+if (day >= 20 && day <31){
+    console.log('в третю')
+}
 // - Скласти розклад на тиждень за домопоги switch. Користувач
 // вводить порядковий номер дня тижня і на екрані відображається
 // інфа що заплановано на цей день (можна замість плану на день,
 // назву дня англійською).
+let dayx = 3
+switch (dayx){
+    case 1:
+        console.log('vajnue dela1')
+        break
+    case 2:
+        console.log('vajnue dela2')
+        break
+    case 3:
+        console.log('vajnue dela3')
+        break
+    case 4:
+        console.log('vajnue dela4')
+        break
+    case 5:
+        console.log('vajnue dela5')
+        break
+    case 6:
+        console.log('vajnue dela6')
+        break
+    case 7:
+        console.log('otduh')
+        break
+}
 //     - Користувач вводить або має два числа.
 //         Потрібно знайти та вивести максимальне число з тих
 //         двох .
@@ -62,7 +144,11 @@ let obj3a = {title:'blin',pageCount:333,genre:'ka',authors[]}
 //         а це 0 null undefined і тд).
 //
 //
-//     - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
+//     - з файлу arrays.js (лежить в папці 2023 plan ) взяти
+//     масив coursesAndDurationArray. За допомоги іф
+//     перевірити кожен його елемент на тривалість навчання.
+//     У випадку якщо тривалість довша за 5 місяців вивести
+//     в консоль "Супер".
 </script>
 </body>
 </html>
