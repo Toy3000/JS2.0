@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+// - створити функцію яка обчислює та повертає площу прямокутника
+// зі сторонами а і б
+
+function tricutnik(Atrik,Btrik){
+let s = Atrik * Btrik / 2
+    console.log(s)
+}
+tricutnik(3,5)
+// - створити функцію яка обчислює та повертає площу кола з
+// радіусом r
+function kolo(Rkolo){
+    let s = Rkolo * Rkolo * Math.PI
+    console.log(s)
+}
+kolo(7)
+// - створити функцію яка обчислює та повертає площу циліндру
+// висотою h, та радіутом r
+function cilindr(Rcil,Hcil){
+    let s = Rcil * Rcil * Math.PI * 2 + 2 * Math.PI * Rcil * Hcil
+    console.log(s)
+}
+cilindr(2,3)
+// - створити функцію яка приймає масив та виводить кожен його
+// елемент
+let arr1 = [1,2,3,4,5,6,7,8,9]
+function arr1func(){
+    for (let i = 0; i < arr1.length; i++) {
+        console.log(arr1[i])
+    }
+}
+arr1func()
+// - створити функцію яка створює параграф з текстом. Текст
+// задати через аргумент
+function paragraf (text){
+    document.write(`<h1>${text}</h1> `)
+}
+paragraf('Hello andrej!')
+// - створити функцію яка створює ul з трьома елементами li.
+// Текст li задати через аргумент всім однаковий
+function lif (text){
+    document.write(`<ul>`)
+        for (let u = 0; u < 3; u++) {
+        document.write(`<li>${text}</li>`)
+    }
+    document.write(`</ul>`)
+}
+lif('bugagaga')
+// - створити функцію яка створює ul з трьома елементами li.
+// Текст li задати через аргумент всім однаковий. Кількість li
+// визначається другим аргументом, який є числовим (тут
+// використовувати цикл)
+function lif2 (text,kolvo){
+    document.write(`<ul>`)
+    for (let u = 0; u < kolvo; u++) {
+        document.write(`<li>${text}</li>`)
+    }
+    document.write(`</ul>`)
+}
+lif2('jopka',6)
+// - створити функцію яка приймає масив примітивних елементів
+// (числа,стрінги,булеві), та будує для них список
+function lif3 (){
+    document.write(`<ul>`)
+    for (let u = 0; u < arr1.length; u++) {
+        document.write(`<li>${arr1[u]}</li>`)
+    }
+    document.write(`</ul>`)
+}
+lif3()
+// - створити функцію яка приймає масив об'єктів з наступними
+// полями id,name,age , та виводить їх в документ. Для кожного
+// об'єкту окремий блок.
+function usersf (){
+    for (let u = 0; u < users.length; u++) {
+        let usern = users[u].name
+        let usera = users[u].age
+        let user = (usern + ' ' + usera)
+        document.write(`<div>${user}</div>`)
+    }
+}
+usersf()
+// - створити функцію яка повертає найменьше число з масиву
+function minf (){
+    let x1 = users[0].age
+    for (let u = 0; u < users.length; u++) {
+        if (u+1<users.length){
+            let y1 = users[u+1].age
+            if (x1>y1){
+                x1 = y1
+            }
+        }
+    }
+    document.write(`<h2>min = ${x1}</h2>`)
+}
+minf()
+// - створити функцію sum(arr)яка приймає масив чисел, сумує
+// значення елементів масиву та повертає його. Приклад
+// sum([1,2,10]) //->13
+function sum(arr) {
+    let argum1 = 0
+    for (let i = 1; i < arr.length; i++) {
+        if (argum1 === 0){argum1 = arr[0]}
+            argum1 = argum1 + arr[i]
+    }
+    console.log(argum1)
+}
+sum(arr1)
+// - створити функцію swap(arr,index1,index2). Функція міняє
+// місцями заняення у відаовідних індексах
+// Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+function swap(arr,index1,index2) {
+    wow1 = arr[index1]
+    wow2 = arr[index2]
+    arr[index1] = wow2
+    arr[index2] = wow1
+    console.log(arr)
+}
+swap([11,22,33,44],0,1)
+// - Написати функцію обміну валюти exchange(sumUAH,
+// currencyValues,exchangeCurrency)
+// Приклад exchange(10000,[{currency:'USD',value:40},
+// {currency:'EUR',value:42}],'USD') // => 250
+function exchange(sumUAH,currencyValues,exchangeCurrency){
+    let babki = 0
+    if (exchangeCurrency === currencyValues[0].currency){
+        babki = currencyValues[0].value
+    }
+    if (exchangeCurrency === currencyValues[1].currency){
+        babki = currencyValues[1].value
+    }
+    let sumGG = sumUAH / babki
+    document.write(sumGG)
+}
+exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD')
+</script>
+</body>
+</html>
